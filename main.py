@@ -13,6 +13,10 @@ try:
         lines = f.read().splitlines()
 
     for line in lines:
+        line = line.strip();
+        if (line == ''):
+            continue;
+
         yt = YouTube(line)
 
         # # download the file
